@@ -19,10 +19,12 @@ Vagrant.configure("2") do |config|
 
   # Install xfce and virtualbox additions
   config.vm.provision "shell", inline: "sudo apt-get update"
-  config.vm.provision "shell", inline: "sudo DEBIAN_FRONTEND=noninteractive apt-get install -y lightdm xfce4 \
-    virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11"
+  config.vm.provision "shell", inline: "sudo DEBIAN_FRONTEND=noninteractive apt-get install -y xfce4 \
+    virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 \
+    lightdm lightdm-gtk-greeter"
   # Permit anyone to start the GUI
   config.vm.provision "shell", inline: "sudo sed -i 's/allowed_users=.*$/allowed_users=anybody/' /etc/X11/Xwrapper.config"
+  config.vm.provision "shell", inline: "sudo VBoxClient --clipboard && sudo VBoxClient --draganddrop && sudo VBoxClient --display && sudo VBoxClient --checkhostversion && sudo VBoxClient --seamless"
 
   config.vm.provision "shell", inline: "sudo DEBIAN_FRONTEND=noninteractive apt-get install -y curl geany aptitude synaptic \
     build-essential cmake gdb dh-autoreconf libgl1-mesa-dev pkg-config python-zmq libzmq3-dev libxslt1.1 git \
@@ -35,13 +37,17 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: "sudo -H pip3 install -r /home/vagrant/bcbtools/requirements.txt"
 
-  config.vm.provision "shell", inline: "sudo startxfce4 &"
-
   config.vm.provision "file", source: "config/config.json", destination: "~/Btcb/config.json"
   config.vm.provision "file", source: "config/config.json", destination: "~/BtcbBeta/config.json"
   config.vm.provision "file", source: "BcbTools.desktop", destination: "~/Desktop/BcbTools.desktop"
 
+#  config.vm.provision "file", source: "config/lightdm.conf", destination: "/tmp/lightdm.conf"
+#  config.vm.provision "shell", inline: "sudo cp /tmp/lightdm.conf /etc/lightdm/lightdm.conf.d/"
+
 
   # config.vm.provision :reload
+
+
+  # config.vm.provision "shell", inline: "startxfce4 &"
 
 end

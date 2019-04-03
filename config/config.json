@@ -47,11 +47,10 @@
             "rotation_size": "4194304",
             "flush": "true"
         },
-        "work_peers": "",
-        "preconfigured_peers": [
-        ],
+        "work_peers": [],
+        "preconfigured_peers": [],
         "preconfigured_representatives": [
-            "bcb_333zpdc5fkucekup1mb8oiuusy6aon5qux45c9mgz1icjtihbj8oichgif91",
+            "bcb_333zpdc5fkucekup1mb8oiuusy6aon5qux45c9mgz1icjtihbj8oichgif91"
         ],
         "online_weight_minimum": "60000000000000000000000000000000000",
         "online_weight_quorum": "5",
@@ -69,7 +68,7 @@
         "block_processor_batch_max_time": "5000",
         "allow_local_peers": "false"
     },
-    "opencl_enable": "true",
+    "opencl_enable": "false",
     "opencl": {
         "platform": "0",
         "device": "0",

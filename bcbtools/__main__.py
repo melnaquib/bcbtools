@@ -16,8 +16,8 @@ from PyQt5.QtWidgets import QApplication
 import utils
 
 def start_rpc():
-    p = os.spawnl(os.P_DETACH, 'btcb_node --daemon')
-    return p
+    os.system('btcb_node --daemon &')
+    #return p
 
 
 def main():
@@ -29,7 +29,8 @@ def main():
 
     w = ui_setup()
 
-    node_p = start_rpc()
+    #node_p = start_rpc()
+    start_rpc()
 
     res = app.exec_()
     return res

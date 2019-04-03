@@ -6,7 +6,8 @@ from PyQt5.QtCore import QProcess
 
 NODE_CMD = 'btcb_node'
 #NODE_CMD = '/home/melnaquib/work/client/freelancer.com/bb/code/btcb_build_beta/' + NODE_CMD
-NODE_URL = "http://[::1]:15000"
+# NODE_URL = "http://[::1]:15000"
+NODE_URL = "http://[::1]:17076"
 
 
 def cmd(args, timeout = -1, end = None):
