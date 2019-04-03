@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Bitcoin Black Tools
+Comment=Bitcoin Black Offline Tools
+Type=Application
+Path=/home/vagrant/bcbtools
+Exec=python3 main.py
+Icon=/home/vagrant/bcbtools/logo.png
+Categories=Office, Finance

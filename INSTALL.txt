@@ -1,0 +1,9 @@
+How To Install 
+
+1- please , download and install inno setup application in path C:\work\opt\InnoSetup5
+
+2- install anaconda in path c:\work\opt\Anaconda3
+
+3- put source code of project in c:\work\code\bcbtools
+
+4- run pkg.batch from c:\work\code\bcbtools   this will generate setup file in c:\work\build\multiprocessing_setup.exe

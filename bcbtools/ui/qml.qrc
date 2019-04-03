@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>DbSetting.qml</file>
+        <file>Operation.qml</file>
+        <file>LabdevSettings.qml</file>
+        <file>MaterialIcons.js</file>
+        <file>resource/materialdesignicons-webfont.ttf</file>
+        <file>image/medleap.png</file>
+    </qresource>
+</RCC>

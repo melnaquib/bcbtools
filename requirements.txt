@@ -1,0 +1,5 @@
+requests
+prompt_toolkit
+pyqt5
+qdarkstyle
+QScintilla

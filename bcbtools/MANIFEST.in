@@ -1,0 +1,4 @@
+include ui/*.qml
+include ui/*.js
+include ui/resources/*.*
+include ui/images/*.*
