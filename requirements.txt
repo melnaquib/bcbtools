@@ -1,5 +1,5 @@
 requests
 prompt_toolkit
-pyqt5
+PyQt5
 qdarkstyle
 QScintilla

@@ -72,3 +72,5 @@ __pycache__/
 
 **/*.pro.user
 **/*.jsc
+
+.vagrant/

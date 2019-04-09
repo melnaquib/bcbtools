@@ -1,9 +1,7 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "generic/ubuntu1804"
-
+  config.vm.box = "ubuntu/bionic64"
 
   config.vm.synced_folder ".", "/home/vagrant/bcbtools/"
-
 
   config.vm.provider "virtualbox" do |vb|
     # Display the VirtualBox GUI when booting the machine
@@ -19,12 +17,9 @@ Vagrant.configure("2") do |config|
     # Enable the shared clipboard:
     vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']  end
 
-    config.vm.network "public_network", type: "dhcp"
-
-
   # Install xfce and virtualbox additions
   config.vm.provision "shell", inline: "sudo apt-get update"
-  config.vm.provision "shell", inline: "sudo DEBIAN_FRONTEND=noninteractive apt-get install -y xfce4 xfce4-terminal \
+  config.vm.provision "shell", inline: "sudo DEBIAN_FRONTEND=noninteractive apt-get install -y xfce4 \
     virtualbox-guest-dkms virtualbox-guest-utils virtualbox-guest-x11 \
     lightdm lightdm-gtk-greeter"
   # Permit anyone to start the GUI
@@ -33,7 +28,6 @@ Vagrant.configure("2") do |config|
 
   config.vm.provision "shell", inline: "sudo DEBIAN_FRONTEND=noninteractive apt-get install -y curl geany aptitude synaptic \
     build-essential cmake gdb dh-autoreconf libgl1-mesa-dev pkg-config python-zmq libzmq3-dev libxslt1.1 git \
-    python python-dev python-wheel python-pip python-setuptools \
     python3 python3-dev python3-wheel python3-pip python3-setuptools \
     libegl1-mesa mesa-utils libxcb-icccm4 libxcb-render-util0 libxkbcommon-x11-0 \
     libxcb-image0 libxcb-keysyms1 libxcb-xkb1 libdouble-conversion1"

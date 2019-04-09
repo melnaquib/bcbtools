@@ -2,12 +2,11 @@
 
 # Form implementation generated from reading ui file '/home/melnaquib/work/client/freelancer.com/bb/code/bcbtools/bcbtools/ui2/tools/Genesis.ui'
 #
-# Created by: PyQt5 UI code generator 5.12.1
+# Created by: PyQt5 UI code generator 5.10.1
 #
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -22,8 +21,6 @@ class Ui_Form(object):
         Form.setWindowTitle(_translate("Form", "Form"))
 
 
-
-
 if __name__ == "__main__":
     import sys
     app = QtWidgets.QApplication(sys.argv)
@@ -32,3 +29,4 @@ if __name__ == "__main__":
     ui.setupUi(Form)
     Form.show()
     sys.exit(app.exec_())
+
