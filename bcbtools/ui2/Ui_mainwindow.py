@@ -62,6 +62,7 @@ class Ui_MainWindow(object):
         self.seedEdit.setObjectName("seedEdit")
         self.gridLayout_2.addWidget(self.seedEdit, 0, 0, 1, 1)
         self.prvkText = QtWidgets.QLineEdit(self.widget)
+        self.prvkText.setEchoMode(QtWidgets.QLineEdit.PasswordEchoOnEdit)
         self.prvkText.setObjectName("prvkText")
         self.gridLayout_2.addWidget(self.prvkText, 0, 1, 1, 1)
         self.gridLayout.addWidget(self.widget, 0, 0, 1, 1)
@@ -91,9 +92,10 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Bcb Offline Tools"))
         self.genBtn.setText(_translate("MainWindow", "Generate"))
         self.seedEdit.setPlaceholderText(_translate("MainWindow", "Seed"))
+        self.prvkText.setPlaceholderText(_translate("MainWindow", "Private Key"))
 
 
 if __name__ == "__main__":

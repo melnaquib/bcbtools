@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
     # Enable the shared clipboard:
     vb.customize ['modifyvm', :id, '--clipboard', 'bidirectional']  end
 
-    config.vm.network "public_network", type: "dhcp"
+    # config.vm.network "public_network", type: "dhcp"
 
 
   # Install xfce and virtualbox additions
@@ -39,7 +39,7 @@ Vagrant.configure("2") do |config|
     libxcb-image0 libxcb-keysyms1 libxcb-xkb1 libdouble-conversion1"
 
 
-  config.vm.provision :shell, :path => "scripts/btcb_node_install.sh"
+  config.vm.provision :shell, :path => "scripts/btcb_node_install.sh", :args => ENV['BTCB_NETWORK']
 
   config.vm.provision "shell", inline: "sudo -H pip3 install -r /home/vagrant/bcbtools/requirements.txt"
 
@@ -55,5 +55,6 @@ Vagrant.configure("2") do |config|
 
 
   # config.vm.provision "shell", inline: "startxfce4 &"
+  config.vm.provision "shell", inline: "sudo -H /etc/init.d/lightdm start"
 
 end

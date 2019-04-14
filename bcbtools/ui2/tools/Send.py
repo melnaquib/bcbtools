@@ -37,7 +37,7 @@ class Send(QWidget, Ui_Form):
 
 
     def gen(self, account):
-        res = bcb.send(account['prvk'], account['addr'], account['balance'],
+        res = bcb.send(account['prvk'], account['addr'], account['balance'][0],
                            self.amountText.text(), self.dstText.text(), account['frontier'])
-        res = json.dumps(res)
+        res = json.dumps(res, indent=2)
         return res

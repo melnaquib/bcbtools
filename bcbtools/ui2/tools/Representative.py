@@ -28,5 +28,5 @@ class Representative(QWidget, Ui_Form):
 
     def gen(self, account):
         res = bcb.repr_set(account['prvk'], account['addr'], self.reprText.text(), account['frontier'])
-        res = json.dumps(res)
+        res = json.dumps(res, indent=2)
         return res

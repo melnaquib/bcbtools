@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Bcb Offline Tools</string>
   </property>
   <property name="showPasswdChecked" stdset="0">
    <bool>false</bool>
@@ -78,7 +78,14 @@
         </widget>
        </item>
        <item row="0" column="1">
-        <widget class="QLineEdit" name="prvkText"/>
+        <widget class="QLineEdit" name="prvkText">
+         <property name="echoMode">
+          <enum>QLineEdit::PasswordEchoOnEdit</enum>
+         </property>
+         <property name="placeholderText">
+          <string>Private Key</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>

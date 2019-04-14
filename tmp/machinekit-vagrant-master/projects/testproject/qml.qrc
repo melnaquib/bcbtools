@@ -1,8 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>main.qml</file>
-        <file>testproject.untitled/untitled.qml</file>
-        <file>testproject.untitled/description.ini</file>
-    </qresource>
-</RCC>
-

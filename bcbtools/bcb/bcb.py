@@ -133,7 +133,7 @@ def send(src_prvk, src_addr, src_balance, amount, dst_addr, prev):
       "key": src_prvk,
       "account": src_addr,
       "destination": dst_addr,
-      "balance": src_balance[0],
+      "balance": src_balance,
       "amount": amount,
       "previous": prev
     }
@@ -141,13 +141,13 @@ def send(src_prvk, src_addr, src_balance, amount, dst_addr, prev):
     return res
 
 
-def repr_set(src_prvk, src_addr, repr_pubk, prev):
+def repr_set(src_prvk, src_addr, repr_addr, prev):
     args = {
       "action": "block_create",
       "type": "change",
       "key": src_prvk,
       "account": src_addr,
-      "representative": repr_pubk,
+      "representative": repr_addr,
       "previous": prev
     }
     res = rpc(args)

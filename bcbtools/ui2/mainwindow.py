@@ -111,8 +111,10 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         showPasswdChecked = self.property("showPasswdChecked")
         if showPasswdChecked:
             self.seedEdit.setEchoMode(QLineEdit.Normal)
-            self.prvkBtn.setText(self.prvk)
+            self.prvkText.setEchoMode(QLineEdit.Normal)
         else:
             self.seedEdit.setEchoMode(QLineEdit.PasswordEchoOnEdit)
+            self.prvkText.setEchoMode(QLineEdit.PasswordEchoOnEdit)
             self.prvkBtn.setText(self.tr("Show Seed and Private Key"))
+
 

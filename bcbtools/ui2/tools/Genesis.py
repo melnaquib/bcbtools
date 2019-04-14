@@ -25,5 +25,5 @@ class Genisis(QWidget, Ui_Form):
         super(Genisis, self).__init__(parent)
         self.setupUi(self)
 
-    def gen(self, seed, prvk, pubk, addr):
-        return bcb.genesis(prvk)
+    def gen(self, account):
+        return bcb.genesis(account['prvk'])

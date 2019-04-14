@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-5.1.dtd">
 <!-- eric project file for project bcbtools -->
-<!-- Saved: 2019-04-03, 14:29:28 -->
+<!-- Saved: 2019-04-14, 01:15:03 -->
 <!-- Copyright (C) 2019 ,  -->
 <Project version="5.1">
   <Language>en_US</Language>
@@ -31,7 +31,12 @@
     <Source>bcbtools/ui2/mainwindow.py</Source>
     <Source>bcbtools/ui2/setup.py</Source>
     <Source>bcbtools/ui2/tools/Genesis.py</Source>
+    <Source>bcbtools/ui2/tools/Open.py</Source>
     <Source>bcbtools/ui2/tools/Ui_Genesis.py</Source>
+    <Source>bcbtools/ui2/tools/Ui_Open.py</Source>
+    <Source>bcbtools/ui2/tools/Ui_Representative.py</Source>
+    <Source>bcbtools/ui2/tools/Ui_Send.py</Source>
+    <Source>bcbtools/ui2/tools/Ui_SendMutli.py</Source>
     <Source>hooks/__init__.py</Source>
     <Source>hooks/hook-medleap.labdev.py</Source>
     <Source>main.py</Source>
@@ -43,11 +48,14 @@
     <Form>bcbtools/ui2/SeedWidget.ui</Form>
     <Form>bcbtools/ui2/mainwindow.ui</Form>
     <Form>bcbtools/ui2/tools/Genesis.ui</Form>
+    <Form>bcbtools/ui2/tools/Open.ui</Form>
+    <Form>bcbtools/ui2/tools/Representative.ui</Form>
+    <Form>bcbtools/ui2/tools/Send.ui</Form>
+    <Form>bcbtools/ui2/tools/SendMutli.ui</Form>
   </Forms>
   <Translations/>
   <Resources>
     <Resource>bcbtools/ui/qml.qrc</Resource>
-    <Resource>tmp/machinekit-vagrant-master/projects/testproject/qml.qrc</Resource>
     <Resource>vagrant/projects/testproject/qml.qrc</Resource>
   </Resources>
   <Interfaces/>
@@ -58,7 +66,6 @@
     <Other>README.md</Other>
     <Other>bcbtools/ui2.e4p</Other>
     <Other>requirements.txt</Other>
-    <Other>tmp/machinekit-vagrant-master/README.md</Other>
     <Other>vagrant/README.md</Other>
   </Others>
   <MainScript>main.py</MainScript>
