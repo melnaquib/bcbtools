@@ -152,3 +152,16 @@ def repr_set(src_prvk, src_addr, repr_addr, prev):
     }
     res = rpc(args)
     return res
+
+def open(src_prvk, src_addr, repr_addr, prev):
+    args = {
+        "action": "block_create",
+        "type": "open",
+        "key": src_prvk,
+        "account": src_addr,
+        "representative": repr_addr,
+        "source": prev
+    }
+
+    res = rpc(args)
+    return res
