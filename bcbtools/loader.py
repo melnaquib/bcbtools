@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QTabWidget
 
 from bcbtools.ui2.tools.Genesis import Genisis
+from bcbtools.ui2.tools.Open import Open
 from bcbtools.ui2.tools.Representative import Representative
 from bcbtools.ui2.tools.Send import Send
 from bcbtools.ui2.tools.SendMutli import SendMutli
@@ -25,9 +26,9 @@ def load(widget):
     w4.setWindowTitle("Representative")
     widget.addTab(w4, "Representative")
 
-    w4 = Representative(widget)
-    w4.setWindowTitle("Representative")
-    widget.addTab(w4, "Open")
+    w5 = Open(widget)
+    w5.setWindowTitle("Open")
+    widget.addTab(w5, "Open")
 
 
 
