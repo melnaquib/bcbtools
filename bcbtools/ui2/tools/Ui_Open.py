@@ -16,12 +16,9 @@ class Ui_Form(object):
         self.gridLayout.setObjectName("gridLayout")
         self.reprText = QtWidgets.QLineEdit(Form)
         self.reprText.setObjectName("reprText")
-        self.gridLayout.addWidget(self.reprText, 1, 1, 1, 1)
+        self.gridLayout.addWidget(self.reprText, 0, 1, 1, 1)
         spacerItem = QtWidgets.QSpacerItem(20, 244, QtWidgets.QSizePolicy.Minimum, QtWidgets.QSizePolicy.Expanding)
-        self.gridLayout.addItem(spacerItem, 2, 1, 1, 1)
-        self.sendHashText = QtWidgets.QLineEdit(Form)
-        self.sendHashText.setObjectName("sendHashText")
-        self.gridLayout.addWidget(self.sendHashText, 0, 1, 1, 1)
+        self.gridLayout.addItem(spacerItem, 1, 1, 1, 1)
 
         self.retranslateUi(Form)
         QtCore.QMetaObject.connectSlotsByName(Form)
@@ -30,7 +27,6 @@ class Ui_Form(object):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Form"))
         self.reprText.setPlaceholderText(_translate("Form", "Representative"))
-        self.sendHashText.setPlaceholderText(_translate("Form", "Hash Of Send Block"))
 
 
 if __name__ == "__main__":

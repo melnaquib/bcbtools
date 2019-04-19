@@ -27,6 +27,6 @@ class Open(QWidget, Ui_Form):
         self.setupUi(self)
 
     def gen(self, account):
-        res = bcb.open(account['prvk'], account['addr'], self.reprText.text(), self.sendHashText.text())
+        res = bcb.open(account['prvk'], account['addr'], self.reprText.text(), account['frontier'])
         res = json.dumps(res, indent=2)
         return res

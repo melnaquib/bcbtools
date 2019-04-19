@@ -3,6 +3,7 @@
 """
 Module implementing MainWindow.
 """
+import json
 
 from PyQt5.QtCore import pyqtSlot, QRegularExpression, Qt
 from PyQt5.QtGui import QRegularExpressionValidator, QClipboard, QColor
@@ -56,6 +57,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
         currentTool = self.toolsTabs.currentWidget()
 
         self.account['frontier'] = self.prevBlockText.text()
+        self.account['balance'] = list(map(int, self.balanceText.text().split(', ')))
 
         res = currentTool.gen(self.account)
         self.resultTool.setText(currentTool.windowTitle())
